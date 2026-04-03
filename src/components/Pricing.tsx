@@ -2,17 +2,18 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Check, Crown, Zap } from "lucide-react";
+import { Check, Crown, Zap, Gift } from "lucide-react";
 
 const plans = [
   {
     name: "Free",
     price: "무료",
     period: "",
+    promo: null,
     desc: "cup+를 처음 시작하는 매니저",
     features: [
+      "회원 등록 최대 5명",
       "일 3회 매칭 요청",
-      "최대 3명 회원 관리",
       "프로필 마켓 탐색",
       "기본 필터링",
       "실시간 채팅",
@@ -22,33 +23,35 @@ const plans = [
     gradient: "",
   },
   {
-    name: "Standard",
-    price: "₩29,900",
+    name: "Silver",
+    price: "₩7,700",
     period: "/월",
+    promo: "첫 3개월 특별가",
     desc: "본격적으로 매칭하는 매니저",
     icon: Zap,
     features: [
+      "회원 등록 최대 50명",
       "일 30회 매칭 요청",
-      "최대 5명 회원 관리",
       "고급 필터 프리셋",
       "검증 뱃지 우선 노출",
       "매칭 통계 대시보드",
       "우선 고객 지원",
     ],
-    cta: "Standard 시작",
+    cta: "Silver 시작",
     popular: true,
     gradient: "from-coral to-coral-light",
   },
   {
     name: "Gold",
-    price: "₩59,900",
+    price: "₩14,900",
     period: "/월",
+    promo: "첫 3개월 특별가",
     desc: "대량 매칭을 진행하는 매니저",
     icon: Crown,
     features: [
+      "회원 등록 무제한",
       "무제한 매칭 요청",
-      "최대 10명 회원 관리",
-      "모든 Standard 기능",
+      "모든 Silver 기능",
       "AI 추천 매칭 (예정)",
       "전용 매니저 지원",
       "맞춤 리포트",
@@ -136,6 +139,16 @@ export default function Pricing() {
                     </span>
                   )}
                 </div>
+                {plan.promo && (
+                  <div className={`mt-2 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium ${
+                    plan.popular
+                      ? "bg-coral/20 text-coral-light"
+                      : "bg-amber-50 text-amber-600"
+                  }`}>
+                    <Gift size={12} />
+                    {plan.promo}
+                  </div>
+                )}
                 <p
                   className={`mt-2 text-sm ${
                     plan.popular ? "text-gray-400" : "text-gray-500"
