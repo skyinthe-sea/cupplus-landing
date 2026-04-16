@@ -34,20 +34,16 @@ export default function LegalShell({
   const [cameFromInternal, setCameFromInternal] = useState(false);
 
   useEffect(() => {
-    if (typeof document === "undefined") return;
-    try {
-      const ref = document.referrer;
-      if (ref && new URL(ref).origin === window.location.origin) {
-        setCameFromInternal(true);
-      }
-    } catch {
-      /* ignore */
+    if (typeof window === "undefined") return;
+    if (sessionStorage.getItem("cupplus-from-home") === "1") {
+      setCameFromInternal(true);
     }
   }, []);
 
   const handleHome = (e: React.MouseEvent) => {
     if (cameFromInternal) {
       e.preventDefault();
+      sessionStorage.removeItem("cupplus-from-home");
       router.back();
     }
   };
@@ -110,7 +106,7 @@ export default function LegalShell({
             />
             홈으로
           </Link>
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" onClick={handleHome} className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-coral to-coral-light">
               <span className="text-xs font-bold text-white">c+</span>
             </div>

@@ -17,10 +17,18 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-8 text-sm">
-            <Link href="/terms" className="hover:text-white transition-colors">
+            <Link
+              href="/terms"
+              onClick={() => sessionStorage.setItem("cupplus-from-home", "1")}
+              className="hover:text-white transition-colors"
+            >
               이용약관
             </Link>
-            <Link href="/privacy" className="hover:text-white transition-colors">
+            <Link
+              href="/privacy"
+              onClick={() => sessionStorage.setItem("cupplus-from-home", "1")}
+              className="hover:text-white transition-colors"
+            >
               개인정보처리방침
             </Link>
             <a
