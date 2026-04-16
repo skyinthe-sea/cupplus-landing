@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-gray-950 text-gray-400 py-12">
@@ -15,13 +17,16 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-8 text-sm">
-            <a href="#" className="hover:text-white transition-colors">
+            <Link href="/terms" className="hover:text-white transition-colors">
               이용약관
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link href="/privacy" className="hover:text-white transition-colors">
               개인정보처리방침
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <a
+              href="mailto:myclick90@gmail.com"
+              className="hover:text-white transition-colors"
+            >
               고객지원
             </a>
           </div>
