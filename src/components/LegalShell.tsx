@@ -3,6 +3,7 @@
 import { ReactNode, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ArrowLeft, ArrowUp, List, X } from "lucide-react";
 
 export type LegalSection = {
@@ -26,9 +27,30 @@ export default function LegalShell({
   effectiveDate,
   sections,
 }: Props) {
+  const router = useRouter();
   const [activeId, setActiveId] = useState<string>(sections[0]?.id ?? "");
   const [tocOpen, setTocOpen] = useState(false);
   const [showTop, setShowTop] = useState(false);
+  const [cameFromInternal, setCameFromInternal] = useState(false);
+
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    try {
+      const ref = document.referrer;
+      if (ref && new URL(ref).origin === window.location.origin) {
+        setCameFromInternal(true);
+      }
+    } catch {
+      /* ignore */
+    }
+  }, []);
+
+  const handleHome = (e: React.MouseEvent) => {
+    if (cameFromInternal) {
+      e.preventDefault();
+      router.back();
+    }
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -79,6 +101,7 @@ export default function LegalShell({
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link
             href="/"
+            onClick={handleHome}
             className="group flex items-center gap-2 text-sm font-medium text-gray-600 transition-colors hover:text-coral"
           >
             <ArrowLeft
