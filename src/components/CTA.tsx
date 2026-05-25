@@ -89,10 +89,6 @@ export default function CTA() {
               </div>
             </a>
           </div>
-
-          <p className="mt-8 text-sm text-gray-500">
-            출시 준비 중입니다. 곧 만나보실 수 있어요!
-          </p>
         </motion.div>
       </div>
     </section>
