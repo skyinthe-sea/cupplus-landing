@@ -32,7 +32,7 @@ const sections: LegalSection[] = [
             { label: "상호", value: "지서지유" },
             { label: "대표자", value: "임준섭" },
             { label: "사업자등록번호", value: "660-72-00677" },
-            { label: "통신판매업", value: "제2026-서울-00000호 (신고 예정)" },
+            { label: "통신판매업", value: "제2026-의정부흥선-0301호" },
             {
               label: "주소",
               value: "경기도 의정부시 회룡로 111 한신아파트 1동 801호",
