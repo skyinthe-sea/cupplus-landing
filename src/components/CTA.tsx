@@ -43,7 +43,9 @@ export default function CTA() {
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             {/* App Store Button */}
             <a
-              href="#"
+              href="https://apps.apple.com/kr/app/id6762312260"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex items-center gap-3 rounded-2xl bg-white/10 border border-white/10 px-6 py-4 hover:bg-white/15 transition-all"
             >
               <svg
@@ -65,7 +67,9 @@ export default function CTA() {
 
             {/* Google Play Button */}
             <a
-              href="#"
+              href="https://play.google.com/store/apps/details?id=com.jiseosiyu.cupplus.cupplus"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex items-center gap-3 rounded-2xl bg-white/10 border border-white/10 px-6 py-4 hover:bg-white/15 transition-all"
             >
               <svg
