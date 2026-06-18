@@ -24,9 +24,9 @@ const plans = [
   },
   {
     name: "Silver",
-    price: "₩7,700",
+    price: "₩39,000",
     period: "/월",
-    promo: "첫 3개월 특별가",
+    promo: "오픈 기념 무료 운영 중",
     desc: "본격적으로 매칭하는 매니저",
     icon: Zap,
     features: [
@@ -37,15 +37,15 @@ const plans = [
       "매칭 통계 대시보드",
       "우선 고객 지원",
     ],
-    cta: "Silver 시작",
+    cta: "무료로 시작",
     popular: true,
     gradient: "from-coral to-coral-light",
   },
   {
     name: "Gold",
-    price: "₩14,900",
+    price: "₩79,000",
     period: "/월",
-    promo: "첫 3개월 특별가",
+    promo: "오픈 기념 무료 운영 중",
     desc: "대량 매칭을 진행하는 매니저",
     icon: Crown,
     features: [
@@ -56,7 +56,7 @@ const plans = [
       "전용 매니저 지원",
       "맞춤 리포트",
     ],
-    cta: "Gold 시작",
+    cta: "무료로 시작",
     popular: false,
     gradient: "from-amber-500 to-yellow-400",
   },
@@ -82,7 +82,7 @@ export default function Pricing() {
             매니저님에게 맞는 요금제
           </h2>
           <p className="mt-4 text-gray-500">
-            무료로 시작하고, 필요에 따라 업그레이드하세요.
+            현재 오픈 기념으로 전 기능을 무료로 제공합니다. 아래 정식 요금은 유료 전환 시 사전 공지 후 적용됩니다.
           </p>
         </motion.div>
 

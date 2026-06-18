@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "cup+ 서비스 이용약관. 지서지유와 매니저 간의 권리·의무 및 이용 조건을 안내합니다.",
 };
 
-const EFFECTIVE_DATE = "2026년 4월 16일";
+const EFFECTIVE_DATE = "2026년 6월 11일";
 
 const sections: LegalSection[] = [
   {

@@ -40,8 +40,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-white/5 text-center text-xs text-gray-600">
-          &copy; {new Date().getFullYear()} cup+. All rights reserved.
+        <div className="mt-8 pt-8 border-t border-white/5 text-center text-xs text-gray-600 space-y-3">
+          <div className="space-y-1 leading-relaxed">
+            <p>상호: 지서지유 · 대표자: 임준섭 · 사업자등록번호: 660-72-00677</p>
+            <p>통신판매업 신고: 제2026-의정부흥선-0301호</p>
+            <p>주소: 경기도 의정부시 회룡로 111 한신아파트 1동 801호</p>
+            <p>대표전화: 010-5402-7908 · 이메일: myclick90@gmail.com</p>
+          </div>
+          <p>&copy; {new Date().getFullYear()} cup+. All rights reserved.</p>
         </div>
       </div>
     </footer>
