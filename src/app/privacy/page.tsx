@@ -454,8 +454,8 @@ const sections: LegalSection[] = [
               <div className="mt-4">
                 <InfoGrid
                   rows={[
-                    { label: "성명", value: "이정이" },
-                    { label: "직책", value: "개인정보 보호 담당" },
+                    { label: "성명", value: "임준섭" },
+                    { label: "직책", value: "대표" },
                     {
                       label: "연락처",
                       value: (
