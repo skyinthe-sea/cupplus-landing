@@ -31,6 +31,13 @@ export default function Footer() {
             >
               개인정보처리방침
             </Link>
+            <Link
+              href="/account-deletion"
+              onClick={() => sessionStorage.setItem("cupplus-from-home", "1")}
+              className="hover:text-white transition-colors"
+            >
+              계정 삭제
+            </Link>
             <a
               href="mailto:myclick90@gmail.com"
               className="hover:text-white transition-colors"
